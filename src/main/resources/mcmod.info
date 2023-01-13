@@ -1,0 +1,19 @@
+[
+  {
+    "modid": "CommunityModRofl",
+    "name": "CommunityModRofl",
+    "description": "Mod to do stuff",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "Micha",
+      "Florian"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
