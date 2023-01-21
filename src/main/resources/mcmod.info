@@ -1,7 +1,7 @@
 [
   {
-    "modid": "CommunityModRofl",
-    "name": "CommunityModRofl",
+    "modid": "communitymodrofl",
+    "name": "BossFights",
     "description": "Mod to do stuff",
     "version": "${version}",
     "mcversion": "${mcversion}",
