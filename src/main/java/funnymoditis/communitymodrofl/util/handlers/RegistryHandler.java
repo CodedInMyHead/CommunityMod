@@ -25,16 +25,18 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void onModelRegister(ModelRegistryEvent event) {
-        for(Item item : ItemInit.ITEMS) {
-            if (item instanceof IHasModel) {
+
+        ItemInit.ITEMS.forEach(item -> {
+            if(item instanceof IHasModel) {
                 ((IHasModel)item).registerModels();
             }
-        }
+        });
 
-        for (Block block : BlockInit.BLOCKS) {
-            if (block instanceof IHasModel) {
+        BlockInit.BLOCKS.forEach(block -> {
+            if(block instanceof IHasModel) {
                 ((IHasModel)block).registerModels();
             }
-        }
+        });
+
     }
 }
