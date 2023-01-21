@@ -1,6 +1,8 @@
 package funnymoditis.communitymodrofl;
 
 import funnymoditis.communitymodrofl.proxy.CommonProxy;
+import funnymoditis.communitymodrofl.tabs.MichaTab;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -18,6 +20,8 @@ public class Main {
     public static final String MOD_ID = "communitymodrofl";
     public static final String MOD_NAME = "BossFights";
     public static final String VERSION = "1.0";
+
+    public static final CreativeTabs MICHA_TAB = new MichaTab();
 
     @Mod.Instance(MOD_ID)
     public static Main instance;
