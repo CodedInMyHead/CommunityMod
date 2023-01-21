@@ -30,5 +30,11 @@ public class RegistryHandler {
                 ((IHasModel)item).registerModels();
             }
         }
+
+        for (Block block : BlockInit.BLOCKS) {
+            if (block instanceof IHasModel) {
+                ((IHasModel)block).registerModels();
+            }
+        }
     }
 }
