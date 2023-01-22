@@ -1,7 +1,9 @@
 package funnymoditis.communitymodrofl;
 
+import funnymoditis.communitymodrofl.entity.EntityInit;
 import funnymoditis.communitymodrofl.proxy.CommonProxy;
 import funnymoditis.communitymodrofl.tabs.MichaTab;
+import funnymoditis.communitymodrofl.util.handlers.RenderHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -18,6 +20,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Main {
 
     public static final String MOD_ID = "communitymodrofl";
+    public static final String CLIENT_PROXY = "funnymoditis." + MOD_ID + ".proxy.ClientProxy";
+    public static final String COMMON_PROXY = "funnymoditis." + MOD_ID + ".proxy.CommonProxy";
     public static final String MOD_NAME = "BossFights";
     public static final String VERSION = "1.0";
 
@@ -26,12 +30,13 @@ public class Main {
     @Mod.Instance(MOD_ID)
     public static Main instance;
 
-    @SidedProxy(clientSide = "funnymoditis.communitymodrofl.proxy.ClientProxy", serverSide = "funnymoditis.communitymodrofl.proxy.CommonProxy")
+    @SidedProxy(clientSide = CLIENT_PROXY, serverSide = COMMON_PROXY)
     public static CommonProxy proxy;
 
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event) {
-
+        EntityInit.registerEntities();
+        RenderHandler.registerEntityHandlers();
     }
 
     @Mod.EventHandler
