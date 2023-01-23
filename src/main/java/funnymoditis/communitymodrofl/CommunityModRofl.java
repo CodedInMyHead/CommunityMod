@@ -75,7 +75,7 @@ public class CommunityModRofl {
       */
     }
 
-    /**
+    /** 
      * This is a special class that listens to registry events, to allow creation of mod blocks and items at the proper time.
      */
     @Mod.EventBusSubscriber
