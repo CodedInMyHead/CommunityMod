@@ -21,6 +21,7 @@ public class ItemInit {
     public static final Item LAPTOP = new ItemBase("laptop", Developer.MICHA);
     public static final Item POWER_SUPPLY = new ItemBase("psu", Developer.MICHA);
     public static final Item MATRIX = new ItemBase("matrix", Developer.MICHA);
+    public static final Item ICE_SWORD = new ItemBase("sword_ice", Developer.MICHA);
 
     public static final Item GUY_FAWKES_MASK = new ItemBase("helmet_guy_fawkes", Developer.MICHA);
 }
