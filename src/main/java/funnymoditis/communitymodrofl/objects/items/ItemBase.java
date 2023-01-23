@@ -13,7 +13,19 @@ public class ItemBase extends Item implements IHasModel {
     public ItemBase(String name, Developer developer) {
         setTranslationKey(name);
         setRegistryName(name);
-        CreativeTabs creativeTab = developer == Developer.MICHA ? Main.MICHA_TAB : CreativeTabs.MATERIALS;
+        CreativeTabs creativeTab;
+        switch (developer) {
+            case FLORIAN:
+                creativeTab = Main.FLORIAN_TAB;
+                break;
+            case SHANINE:
+                creativeTab = Main.SHANINE_TAB;
+                break;
+            case LEGACY_DEV:
+                creativeTab = Main.LEGACY_TAB;
+                break;
+            default: creativeTab = Main.MICHA_TAB;
+        }
         setCreativeTab(creativeTab);
 
         ItemInit.ITEMS.add(this);

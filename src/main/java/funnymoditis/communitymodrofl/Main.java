@@ -2,7 +2,10 @@ package funnymoditis.communitymodrofl;
 
 import funnymoditis.communitymodrofl.entity.EntityInit;
 import funnymoditis.communitymodrofl.proxy.CommonProxy;
+import funnymoditis.communitymodrofl.tabs.FlorianTab;
+import funnymoditis.communitymodrofl.tabs.LegacyTab;
 import funnymoditis.communitymodrofl.tabs.MichaTab;
+import funnymoditis.communitymodrofl.tabs.ShanineTab;
 import funnymoditis.communitymodrofl.util.handlers.RenderHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -26,6 +29,9 @@ public class Main {
     public static final String VERSION = "1.0";
 
     public static final CreativeTabs MICHA_TAB = new MichaTab();
+    public static final CreativeTabs FLORIAN_TAB = new FlorianTab();
+    public static final CreativeTabs SHANINE_TAB = new ShanineTab();
+    public static final CreativeTabs LEGACY_TAB = new LegacyTab();
 
     @Mod.Instance(MOD_ID)
     public static Main instance;

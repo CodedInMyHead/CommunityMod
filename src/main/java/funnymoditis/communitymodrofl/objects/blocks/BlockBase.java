@@ -16,7 +16,19 @@ public class BlockBase extends Block implements IHasModel {
         super(material);
         setRegistryName(name);
         setTranslationKey(name);
-        CreativeTabs creativeTab = developer == Developer.MICHA ? Main.MICHA_TAB : CreativeTabs.MATERIALS;
+        CreativeTabs creativeTab;
+        switch (developer) {
+            case FLORIAN:
+                creativeTab = Main.FLORIAN_TAB;
+                break;
+            case SHANINE:
+                creativeTab = Main.SHANINE_TAB;
+                break;
+            case LEGACY_DEV:
+                creativeTab = Main.LEGACY_TAB;
+                break;
+            default: creativeTab = Main.MICHA_TAB;
+        }
         setCreativeTab(creativeTab);
 
         BlockInit.BLOCKS.add(this);
